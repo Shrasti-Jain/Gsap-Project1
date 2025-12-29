@@ -25,7 +25,8 @@ ScrollTrigger.matchMedia({
         start: "top 0%",
         end: "top -100%",
         scrub: 1,
-        pin: true
+        pin: true,
+         pinSpacing: false 
       }
     });
   }
