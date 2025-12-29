@@ -2,35 +2,33 @@ gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.matchMedia({
 
-  // Desktop
+  // ✅ Desktop
   "(min-width: 769px)": function () {
     gsap.to(".section2 h2", {
-      x: "-70%",
+      xPercent: -70,
       scrollTrigger: {
         trigger: ".section2",
-        start: "top 0%",
-        end: "top -100%",
+        start: "top top",
+        end: "+=600",
         scrub: 2,
         pin: true
       }
     });
   },
 
-  // Mobile
+  // ✅ Mobile (NO pin → no white space)
   "(max-width: 768px)": function () {
     gsap.to(".section2 h2", {
-      x: "-100%",
+      xPercent: -100,
       scrollTrigger: {
         trigger: ".section2",
-        start: "top 0%",
-        end: "top -100%",
-        scrub: 1,
-        pin: true,
-         pinSpacing: false 
+        start: "top top",
+        end: "+=300",
+        scrub: 1
       }
     });
   }
 });
 
-// important for mobile
+// final refresh
 ScrollTrigger.refresh();
