@@ -1,12 +1,35 @@
-gsap.to(".section2 h2",{
-    transform:"translateX(-150%)",
-    scrollTrigger:{
-        trigger:".section2 ",
-        scroller:"body",
-        markers:true,
-        start:"top 0%",
-        end:"top -150%",
-        scrub:2,
-        pin:true
-    }
-})
+gsap.registerPlugin(ScrollTrigger);
+
+ScrollTrigger.matchMedia({
+
+  // Desktop
+  "(min-width: 769px)": function () {
+    gsap.to(".section2 h2", {
+      x: "-70%",
+      scrollTrigger: {
+        trigger: ".section2",
+        start: "top 0%",
+        end: "top -100%",
+        scrub: 2,
+        pin: true
+      }
+    });
+  },
+
+  // Mobile
+  "(max-width: 768px)": function () {
+    gsap.to(".section2 h2", {
+      x: "-100%",
+      scrollTrigger: {
+        trigger: ".section2",
+        start: "top 0%",
+        end: "top -100%",
+        scrub: 1,
+        pin: true
+      }
+    });
+  }
+});
+
+// important for mobile
+ScrollTrigger.refresh();
