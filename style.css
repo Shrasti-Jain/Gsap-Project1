@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "helvetica neue";
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.section1 {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section2 {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(127, 207, 215);
+ padding: 5px 10px;
+ overflow: hidden;
+}
+.section3 {
+  height: 100%;
+  width: 100%;
+  background-color:black;
+}
+h2{
+    text-transform: uppercase;
+    font-size: 60vh;
+}
