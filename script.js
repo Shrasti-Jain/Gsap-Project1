@@ -2,7 +2,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.matchMedia({
 
-  // ✅ Desktop (PIN works)
+  // Desktop
   "(min-width: 769px)": function () {
     gsap.to(".section2 h2",{
   x:-1500,
@@ -17,7 +17,7 @@ ScrollTrigger.matchMedia({
 })
   },
 
-  // ✅ Mobile (NO pin)
+  // Mobile
   "(max-width: 768px)": function () {
     
     gsap.to(".section2 h2",{
