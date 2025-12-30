@@ -6,7 +6,6 @@
 }
 html,
 body {
-  height: 100%;
   width: 100%;
 }
 .section1 {
@@ -34,5 +33,6 @@ body {
 h2 {
   text-transform: uppercase;
   white-space: nowrap;
-  font-size: clamp(120px, 40vw, 60vh);
+  font-size: 30vw;
+
 }
